@@ -1,9 +1,8 @@
-FROM node:10-alpine
-RUN mkdir -p  /usr/src/prestaya && chown -R node:node /usr/src/prestaya
-WORKDIR /usr/src/prestaya
+FROM node:21-alpine
+RUN mkdir -p /home/node/prestaya
+WORKDIR /home/node/prestaya
 COPY package*.json ./
-USER node
 RUN npm install
-COPY --chown=node:node . .
+COPY . .
 EXPOSE 8080
-CMD [ "node", "server.js" ]
+CMD [ "node", "src/server.js" ]
