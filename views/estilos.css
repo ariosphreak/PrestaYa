@@ -16,11 +16,11 @@ label {
 }
 
 input[type="text"], button {
-  margin-top: 5px;
-  padding: 10px;
+  margin-top: 3px;
+  padding: 5px;
   border: 1px solid #ddd;
   border-radius: 5px;
-  width: 300px;
+  width: 200px;
   box-sizing: border-box; /* Para incluir el padding en el ancho total */
 }
 
@@ -62,3 +62,17 @@ tr:nth-child(even) {
 #resultado {
   margin-top: 20px;
 }
+
+.input-container {
+    display: flex;
+    align-items: center; /* Alinea verticalmente los elementos en el centro */
+    gap: 10px; /* Añade un poco de espacio entre el input y la label */
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
