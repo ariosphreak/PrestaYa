@@ -38,14 +38,14 @@ exports.simuladorPrestamos = function(req, res){
     }
 
     for(i = 0; i < paramPlazoPrestamo; i++){
-        jsonObjetoResulatadoSimulacion[`mes ${i}`]={
+        jsonObjetoResulatadoSimulacion[`mes ${i+1}`]={
             "Valor cuota mensual =": colPesos(valorCuotaMensual[i]),
             "Valor intereses ="    : colPesos(valorInteres[i]),
             "Abono a capital ="    : colPesos(abonoCapital[i]),
             "Valor saldo ="        : colPesos(valorSaldo[i])
         }; 
     }    
-    return res.json(jsonObjetoResulatadoSimulacion);
+    return res.status(200).json(jsonObjetoResulatadoSimulacion);
 };
 
 function colPesos(value) {

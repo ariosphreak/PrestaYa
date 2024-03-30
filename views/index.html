@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Simulador de Préstamo</title>
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<h2>Simulador de Préstamo</h2>
+
+<label for="valorPrestamo">Valor Préstamo:</label><br>
+<input type="text" id="valorPrestamo" name="valorPrestamo"><br><br>
+
+<label for="tasaInteres">Tasa de interés:</label><br>
+<input type="text" id="tasaInteres" name="tasaInteres"><br><br>
+
+<label for="plazoPrestamo">Plazo (en meses):</label><br>
+<input type="text" id="plazoPrestamo" name="plazoPrestamo"><br><br>
+
+<button onclick="simularPrestamo()">Simular</button><br><br>
+
+<div id="resultado"></div>
+
+<script src="simular.js"></script>
+</body>
+</html>

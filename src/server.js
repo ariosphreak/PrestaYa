@@ -1,8 +1,10 @@
 /* Instanciamos variables para Express */
 var express = require('express');
+const cors = require('cors');
 var app = express();               
 
 /* Establecemos las rutas */
+app.use(cors());
 app.use(require('./routes/simuladorPrestamosRoutes'));
 
 /* iniciamos el servidor */
